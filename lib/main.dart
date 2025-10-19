@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'home/main_food_page.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:restuarant/pages/food/popular_food_detail.dart';
+import 'package:restuarant/pages/food/recommended_food_detail.dart';
+import 'package:restuarant/pages/home/main_food_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: MainFoodPage(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: RecommendedFoodDetail(),
     );
   }
 }
