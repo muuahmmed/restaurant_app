@@ -1,16 +1,40 @@
-# restuarant
+🍽️ Restaurant App
+A modern Flutter-based restaurant application that showcases food items, detailed descriptions, and engaging UI animations for an excellent user experience.
 
-A new Flutter project.
+🚀 Features
+🧭 Home Page — Displays popular and recommended dishes with appealing visuals.
 
-## Getting Started
+🍕 Food Detail Pages — Show full descriptions, prices, and options for each meal.
 
-This project is a starting point for a Flutter application.
+📜 Expandable Text Widget — Read more/less functionality for long descriptions.
 
-A few resources to get you started if this is your first Flutter project:
+🧱 Reusable Widgets — Modular design (BigText, SmallText, AppIcon, etc.) for scalability.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🧩 Responsive UI — Built with adaptive layouts using a custom Dimensions utility.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+💨 Smooth Animations — Includes fade and scroll effects for a modern experience.
+
+🛠️ Built With
+Flutter — Front-end framework for cross-platform development.
+
+Dart — Programming language powering Flutter apps.
+
+📂 Project Structure
+css
+Copy code
+lib/
+├── pages/
+│   ├── food_page_body.dart
+│   ├── main_food_page.dart
+│   ├── popular_food_detail.dart
+│   └── recommended_food_detail.dart
+├── utils/
+│   └── dimensions.dart
+├── widgets/
+│   ├── app_column.dart
+│   ├── app_icon.dart
+│   ├── big_text.dart
+│   ├── collapsible_widget.dart
+│   ├── icons_and_text_widget.dart
+│   └── small_text.dart
+└── main.dart
