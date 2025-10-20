@@ -8,7 +8,7 @@ import 'package:restuarant/widgets/collapsible_widget.dart';
 import '../home/main_food_page.dart';
 
 class RecommendedFoodDetail extends StatefulWidget {
-  const RecommendedFoodDetail({super.key});
+  const RecommendedFoodDetail({super.key, required product});
 
   @override
   State<RecommendedFoodDetail> createState() => _RecommendedFoodDetailState();

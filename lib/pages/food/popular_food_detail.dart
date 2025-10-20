@@ -7,9 +7,15 @@ import '../../widgets/app_column.dart';
 import '../../widgets/big_text.dart';
 import '../home/main_food_page.dart';
 
-class PopularFoodDetail extends StatelessWidget {
-  const PopularFoodDetail({super.key});
+class PopularFoodDetail extends StatefulWidget {
+  final dynamic product;
+  const PopularFoodDetail({super.key, required this.product});
 
+  @override
+  State<PopularFoodDetail> createState() => _PopularFoodDetailState();
+}
+
+class _PopularFoodDetailState extends State<PopularFoodDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,15 +78,11 @@ class PopularFoodDetail extends StatelessWidget {
                 color: AppColors.mainColor,
                 borderRadius: BorderRadius.circular(Dimensions.radius20),
               ),
-              child: BigText(
-                text: '\$10 | Add to cart',
-                color: Colors.white,
-              ),
+              child: BigText(text: '\$10 | Add to cart', color: Colors.white),
             ),
           ],
         ),
       ),
-      //
       body: Stack(
         children: [
           //background image
@@ -105,11 +107,11 @@ class PopularFoodDetail extends StatelessWidget {
             child: Row(
               children: [
                 IconButton(
-                    onPressed: () {
-                      navigateTo(context, MainFoodPage());
-                    },
-                    icon: AppIcon(icon: Icons.arrow_back_ios, ),
-                   ),
+                  onPressed: () {
+                    navigateTo(context, MainFoodPage());
+                  },
+                  icon: AppIcon(icon: Icons.arrow_back_ios),
+                ),
                 Spacer(),
                 AppIcon(icon: Icons.shopping_cart_outlined),
               ],
@@ -133,13 +135,13 @@ class PopularFoodDetail extends StatelessWidget {
                   topLeft: Radius.circular(Dimensions.radius20),
                 ),
               ),
-              child: SingleChildScrollView( // ✅ wrap AppColumn
+              child: SingleChildScrollView(
+                // ✅ wrap AppColumn
                 physics: const BouncingScrollPhysics(),
                 child: AppColumn(),
               ),
             ),
           ),
-
         ],
       ),
     );

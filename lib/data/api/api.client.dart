@@ -1,9 +1,11 @@
 import 'package:get/get.dart';
+import 'package:restuarant/utils/apps_constants.dart';
 
 class ApiClient extends GetConnect implements GetxService {
-  late String token;
+  String token = AppsConstants.token;
   final String appBaseUrl;
   late Map<String, String> _mainHeaders;
+
   ApiClient({required this.appBaseUrl}) {
     baseUrl = appBaseUrl;
     timeout = const Duration(seconds: 30);
@@ -12,9 +14,10 @@ class ApiClient extends GetConnect implements GetxService {
       'Authorization': 'Bearer $token',
     };
   }
+
   Future<Response> getData(String uri) async {
     try {
-      Response response = await get(uri, headers: _mainHeaders);
+      Response response = await get(uri);
       return response;
     } catch (e) {
       return Response(statusCode: 500, statusText: e.toString());

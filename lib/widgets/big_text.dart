@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:restuarant/utils/dimensions.dart';
 
+// ignore: must_be_immutable
 class BigText extends StatelessWidget {
-  Color? color;
+  Color color;
   final String text;
   double size ;
   TextOverflow overFlow;
